@@ -54,7 +54,7 @@ function validation(){
             <div class="row">
                 <div class="col-12">
                     <h1>
-                        Non hai inserito numeri pari :(
+                        Non hai inserito numeri dispari :(
                     </h1>
                 </div>
             </div>
