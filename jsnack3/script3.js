@@ -15,6 +15,11 @@ function validation(){
         window.location.reload()
     }
 
+    if ((numero.value < 999) || (numero.value > 9999)){
+        alert('Inserire un numero a 4 cifre');
+        window.location.reload()
+    }
+
     //metto parseInt per sicurezza
     let numeroInserito = parseInt(numero.value);
     console.log(numeroInserito);
