@@ -1,4 +1,4 @@
-// alert('Suggerimento: Maria Rossi')
+alert('Suggerimento: Maria Rossi')
 
 // costruisco un array di invitati
 
@@ -20,8 +20,7 @@ let bottone = document.getElementById('accedi');
 
 function validation() {
     for (let i = 0; i < invitati.length; i++){
-        let provaAccesso = nameSurname.value;
-        
+
         if(invitati[i] === nameSurname.value) {
             
             accesso = true;
