@@ -65,6 +65,7 @@ function validation(){
     }
 }
 
+// scateno la funzione
 bottone.addEventListener('click', validation);
 
 
