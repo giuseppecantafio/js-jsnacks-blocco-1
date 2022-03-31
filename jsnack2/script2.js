@@ -13,6 +13,12 @@ let numeroDisparo;
 const index = [];
 
 function validation(){
+
+    if (isNaN(numeroInserito.value)){
+        alert('ritenta');
+        window.location.reload()
+    }
+
     if (numeroInserito.value % 2 === 0){
         numeroDisparo = false;
     } else {
@@ -23,10 +29,12 @@ function validation(){
         mioArray.push(numeroInserito.value);
         index.push(1);
         console.log(mioArray);
+        numeroInserito.value = " ";
         
     } else {
         index.push(1);
         console.log(mioArray);
+        numeroInserito.value = " ";
     }
 
     if (index.length === 6 && mioArray.length !== 0){ 
@@ -67,6 +75,3 @@ function validation(){
 
 // scateno la funzione
 bottone.addEventListener('click', validation);
-
-
-
