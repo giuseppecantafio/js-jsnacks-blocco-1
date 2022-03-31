@@ -9,6 +9,9 @@ let bottone = document.getElementById('inserisci');
 // dichiaro la variabile numero disparo
 let numeroDisparo;
 
+// dichiaro una index vuota che incrementa a ogni inserimento
+const index = [];
+
 function validation(){
     if (numeroInserito.value % 2 === 0){
         numeroDisparo = false;
@@ -18,10 +21,15 @@ function validation(){
     
     if(numeroDisparo){
         mioArray.push(numeroInserito.value);
+        index.push(1);
+        console.log(mioArray);
+        
+    } else {
+        index.push(1);
         console.log(mioArray);
     }
 
-    if (mioArray.length === 6){ 
+    if (index.length === 6 && mioArray.length !== 0){ 
         let validationNone = document.getElementById('validation');
         validationNone.setAttribute('class', 'd-none');
         let giocoConcluso = document.createElement('div');
@@ -37,7 +45,27 @@ function validation(){
         </div>
         `
         document.body.append(giocoConcluso);
+    } else if (index.length === 6 && mioArray.length === 0) {
+        let validationNone = document.getElementById('validation');
+        validationNone.setAttribute('class', 'd-none');
+        let giocoConcluso = document.createElement('div');
+        giocoConcluso.innerHTML = `
+        <div class="container text-center pt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1>
+                        Non hai inserito numeri pari :(
+                    </h1>
+                </div>
+            </div>
+        </div>
+        `
+        document.body.append(giocoConcluso);
+
     }
 }
 
 bottone.addEventListener('click', validation);
+
+
+
