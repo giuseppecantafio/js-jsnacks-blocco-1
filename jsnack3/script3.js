@@ -15,7 +15,7 @@ function validation(){
         window.location.reload()
     }
 
-    if ((numero.value < 999) || (numero.value > 9999)){
+    if ((numero.value < 1000) || (numero.value > 9999)){
         alert('Inserire un numero a 4 cifre');
         window.location.reload()
     }
